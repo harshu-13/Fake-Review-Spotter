@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Bulk Analysis Dashboard</title>
+    <title>Bulk Analysis Dashboard | Fake Review Spotter</title>
 
     <!-- Favicon -->
     <link rel="icon"
@@ -41,8 +41,8 @@
     <div class="logo">
 
         <img src="{{ url_for('static', filename='images/favicon.png') }}"
-            alt="Fake Review Spotter Logo"
-            class="logo-img">
+             alt="Fake Review Spotter Logo"
+             class="logo-img">
 
         <span>Fake Review Spotter</span>
 
@@ -50,11 +50,11 @@
 
     <div class="nav-links">
 
-        <a href="/">Home</a>
+        <a href="{{ url_for('home') }}">Home</a>
 
-        <a href="/single-review">Single Review</a>
+        <a href="{{ url_for('single_review') }}">Single Review</a>
 
-        <a href="/upload">Bulk Analysis</a>
+        <a href="{{ url_for('upload') }}">Bulk Analysis</a>
 
     </div>
 
@@ -64,118 +64,113 @@
 
 <section style="padding:50px 8%;">
 
-<h1 style="text-align:center;
-margin-bottom:50px;
-font-size:45px;">
+    <h1 style="text-align:center; margin-bottom:50px; font-size:45px;">
 
-<i class="fa-solid fa-chart-column"></i>
+        <i class="fa-solid fa-chart-column"></i>
 
-Bulk Review Analysis Dashboard
+        Bulk Review Analysis Dashboard
 
-</h1>
+    </h1>
 
-<!-- ================= STATS ================= -->
+    <!-- ================= STATS ================= -->
 
-<div class="features">
+    <div class="features">
 
-<div class="feature-card">
+        <div class="feature-card">
 
-<i class="fa-solid fa-file-lines"></i>
+            <i class="fa-solid fa-file-lines"></i>
 
-<h2>Total Reviews</h2>
+            <h2>Total Reviews</h2>
 
-<h1>{{ total_reviews }}</h1>
+            <h1>{{ total_reviews }}</h1>
 
-</div>
+        </div>
 
-<div class="feature-card">
+        <div class="feature-card">
 
-<i class="fa-solid fa-circle-xmark"
-style="color:#dc2626;"></i>
+            <i class="fa-solid fa-circle-xmark"
+               style="color:#dc2626;"></i>
 
-<h2>Fake Reviews</h2>
+            <h2>Fake Reviews</h2>
 
-<h1>{{ fake_reviews }}</h1>
+            <h1>{{ fake_reviews }}</h1>
 
-<p>{{ fake_percentage }}%</p>
+            <p>{{ fake_percentage }}%</p>
 
-</div>
+        </div>
 
-<div class="feature-card">
+        <div class="feature-card">
 
-<i class="fa-solid fa-circle-check"
-style="color:#16a34a;"></i>
+            <i class="fa-solid fa-circle-check"
+               style="color:#16a34a;"></i>
 
-<h2>Genuine Reviews</h2>
+            <h2>Genuine Reviews</h2>
 
-<h1>{{ genuine_reviews }}</h1>
+            <h1>{{ genuine_reviews }}</h1>
 
-<p>{{ genuine_percentage }}%</p>
+            <p>{{ genuine_percentage }}%</p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
-<!-- ================= PIE CHART ================= -->
+    <!-- ================= PIE CHART ================= -->
 
-<div class="feature-card"
-style="margin-top:40px;">
+    <div class="feature-card" style="margin-top:40px;">
 
-<h2>
+        <h2>
 
-<i class="fa-solid fa-chart-pie"></i>
+            <i class="fa-solid fa-chart-pie"></i>
 
-Review Distribution
+            Review Distribution
 
-</h2>
+        </h2>
 
-<br>
+        <br>
 
-{{ chart|safe }}
+        {{ chart|safe }}
 
-</div>
+    </div>
 
-<!-- ================= TABLE ================= -->
+    <!-- ================= TABLE ================= -->
 
-<div class="feature-card"
-style="margin-top:40px;">
+    <div class="feature-card" style="margin-top:40px;">
 
-<h2>
+        <h2>
 
-<i class="fa-solid fa-table"></i>
+            <i class="fa-solid fa-table"></i>
 
-First 10 Reviews
+            First 10 Reviews
 
-</h2>
+        </h2>
 
-<br>
+        <br>
 
-<div style="overflow-x:auto;">
+        <div style="overflow-x:auto;">
 
-{{ tables[0]|safe }}
+            {{ tables[0]|safe }}
 
-</div>
+        </div>
 
-</div>
+    </div>
 
-<!-- ================= DOWNLOAD ================= -->
+    <!-- ================= DOWNLOAD ================= -->
 
-<div style="text-align:center;
-margin-top:40px;">
+    <div style="text-align:center; margin-top:40px;">
 
-<a href="/download_report">
+        <a href="{{ url_for('download_report') }}">
 
-<button class="primary-btn">
+            <button class="primary-btn">
 
-<i class="fa-solid fa-download"></i>
+                <i class="fa-solid fa-download"></i>
 
-Download Analysis Report
+                Download Analysis Report
 
-</button>
+            </button>
 
-</a>
+        </a>
 
-</div>
+    </div>
 
 </section>
 
@@ -183,7 +178,7 @@ Download Analysis Report
 
 <footer>
 
-Built with ❤️ using Flask • NLP • Linear SVM • Machine Learning
+    Built with ❤️ using Flask • NLP • TF-IDF • Linear SVM • Machine Learning
 
 </footer>
 

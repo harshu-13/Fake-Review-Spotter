@@ -15,7 +15,8 @@
           href="{{ url_for('static', filename='images/favicon.png') }}">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
@@ -35,10 +36,9 @@
 
     <div class="logo">
 
-        <img
-            src="{{ url_for('static', filename='images/favicon.png') }}"
-            alt="Fake Review Spotter Logo"
-            class="logo-img">
+        <img src="{{ url_for('static', filename='images/favicon.png') }}"
+             alt="Fake Review Spotter Logo"
+             class="logo-img">
 
         <span>Fake Review Spotter</span>
 
@@ -46,11 +46,11 @@
 
     <div class="nav-links">
 
-        <a href="/">Home</a>
+        <a href="{{ url_for('home') }}">Home</a>
 
-        <a href="/upload">Bulk Analysis</a>
+        <a href="{{ url_for('upload') }}">Bulk Analysis</a>
 
-        <a href="/dashboard">Dashboard</a>
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
 
     </div>
 
@@ -63,24 +63,34 @@
     <div class="hero-content">
 
         <h1>
+
             <i class="fa-solid fa-magnifying-glass"></i>
+
             Analyze a Review
+
         </h1>
 
         <p>
+
             Paste a customer review below and let our
             Machine Learning model determine whether
             it is genuine or fake.
+
         </p>
 
         <!-- Error Message -->
+
         {% if error %}
+
         <div class="error-message">
+
             {{ error }}
+
         </div>
+
         {% endif %}
 
-        <form action="/predict_review" method="POST">
+        <form action="{{ url_for('predict_review') }}" method="POST">
 
             <textarea
                 name="review"
@@ -108,7 +118,7 @@
 
 <footer>
 
-    Built with ❤️ using Flask • NLP • Machine Learning
+    Built with ❤️ using Flask • NLP • TF-IDF • Linear SVM • Machine Learning
 
 </footer>
 

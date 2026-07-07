@@ -37,10 +37,9 @@
 
     <div class="logo">
 
-        <img
-            src="{{ url_for('static', filename='images/favicon.png') }}"
-            alt="Fake Review Spotter Logo"
-            class="logo-img">
+        <img src="{{ url_for('static', filename='images/favicon.png') }}"
+             alt="Fake Review Spotter Logo"
+             class="logo-img">
 
         <span>Fake Review Spotter</span>
 
@@ -48,11 +47,11 @@
 
     <div class="nav-links">
 
-        <a href="/">Home</a>
+        <a href="{{ url_for('home') }}">Home</a>
 
-        <a href="/single-review">Single Review</a>
+        <a href="{{ url_for('single_review') }}">Single Review</a>
 
-        <a href="/upload">Bulk Analysis</a>
+        <a href="{{ url_for('upload') }}">Bulk Analysis</a>
 
     </div>
 
@@ -62,24 +61,24 @@
 
 <section class="hero">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<h1>
+        <h1>
 
-<i class="fa-solid fa-chart-line"></i>
+            <i class="fa-solid fa-chart-line"></i>
 
-Project Dashboard
+            Project Dashboard
 
-</h1>
+        </h1>
 
-<p>
+        <p>
 
-An overview of the Fake Review Spotter project,
-its AI model, features, and performance.
+            An overview of the Fake Review Spotter project,
+            its AI model, features, and performance.
 
-</p>
+        </p>
 
-</div>
+    </div>
 
 </section>
 
@@ -87,63 +86,60 @@ its AI model, features, and performance.
 
 <section class="features">
 
-<div class="feature-card">
+    <div class="feature-card">
 
-<i class="fa-solid fa-brain"></i>
+        <i class="fa-solid fa-brain"></i>
 
-<h2>Machine Learning</h2>
+        <h2>Machine Learning</h2>
 
-<p>
+        <p>
 
-Linear Support Vector Machine (Linear SVM)
+            Linear Support Vector Machine (Linear SVM)
+            trained using Natural Language Processing
+            and TF-IDF Vectorization.
 
-trained using Natural Language Processing
+        </p>
 
-and TF-IDF Vectorization.
+    </div>
 
-</p>
+    <div class="feature-card">
 
-</div>
+        <i class="fa-solid fa-database"></i>
 
-<div class="feature-card">
+        <h2>Datasets</h2>
 
-<i class="fa-solid fa-database"></i>
+        <p>
 
-<h2>Datasets</h2>
+            Amazon Fake Reviews
 
-<p>
+            <br><br>
 
-Amazon Fake Reviews
+            Deceptive Opinion Spam (Hotel Reviews)
 
-<br><br>
+        </p>
 
-Deceptive Opinion Spam (Hotel Reviews)
+    </div>
 
-</p>
+    <div class="feature-card">
 
-</div>
+        <i class="fa-solid fa-bullseye"></i>
 
-<div class="feature-card">
+        <h2>Model Accuracy</h2>
 
-<i class="fa-solid fa-bullseye"></i>
+        <h1 style="color:#16a34a;">
 
-<h2>Model Accuracy</h2>
+            90%
 
-<h1 style="color:#16a34a;">
+        </h1>
 
-90%
+        <p>
 
-</h1>
+            Balanced Precision,
+            Recall and F1-Score
 
-<p>
+        </p>
 
-Balanced Precision,
-
-Recall and F1-Score
-
-</p>
-
-</div>
+    </div>
 
 </section>
 
@@ -151,53 +147,50 @@ Recall and F1-Score
 
 <section class="features">
 
-<div class="feature-card">
+    <div class="feature-card">
 
-<i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
 
-<h2>Single Review Analysis</h2>
+        <h2>Single Review Analysis</h2>
 
-<p>
+        <p>
 
-Analyze one customer review instantly.
+            Analyze one customer review instantly.
 
-</p>
+        </p>
 
-</div>
+    </div>
 
-<div class="feature-card">
+    <div class="feature-card">
 
-<i class="fa-solid fa-file-csv"></i>
+        <i class="fa-solid fa-file-csv"></i>
 
-<h2>Bulk CSV Analysis</h2>
+        <h2>Bulk CSV Analysis</h2>
 
-<p>
+        <p>
 
-Upload CSV files and analyze
+            Upload CSV files and analyze
+            multiple reviews at once.
 
-multiple reviews at once.
+        </p>
 
-</p>
+    </div>
 
-</div>
+    <div class="feature-card">
 
-<div class="feature-card">
+        <i class="fa-solid fa-chart-pie"></i>
 
-<i class="fa-solid fa-chart-pie"></i>
+        <h2>Analytics Dashboard</h2>
 
-<h2>Analytics Dashboard</h2>
+        <p>
 
-<p>
+            Interactive charts,
+            summary statistics,
+            and downloadable reports.
 
-Interactive charts,
+        </p>
 
-summary statistics
-
-and downloadable reports.
-
-</p>
-
-</div>
+    </div>
 
 </section>
 
@@ -205,67 +198,67 @@ and downloadable reports.
 
 <section class="features">
 
-<div class="feature-card">
+    <div class="feature-card">
 
-<i class="fa-brands fa-python"></i>
+        <i class="fa-brands fa-python"></i>
 
-<h2>Backend</h2>
+        <h2>Backend</h2>
 
-<p>
+        <p>
 
-Python
+            Python
 
-<br>
+            <br>
 
-Flask
+            Flask
 
-</p>
+        </p>
 
-</div>
+    </div>
 
-<div class="feature-card">
+    <div class="feature-card">
 
-<i class="fa-solid fa-robot"></i>
+        <i class="fa-solid fa-robot"></i>
 
-<h2>AI & NLP</h2>
+        <h2>AI & NLP</h2>
 
-<p>
+        <p>
 
-NLTK
+            NLTK
 
-<br>
+            <br>
 
-TF-IDF
+            TF-IDF
 
-<br>
+            <br>
 
-Linear SVM
+            Linear SVM
 
-</p>
+        </p>
 
-</div>
+    </div>
 
-<div class="feature-card">
+    <div class="feature-card">
 
-<i class="fa-solid fa-code"></i>
+        <i class="fa-solid fa-code"></i>
 
-<h2>Frontend</h2>
+        <h2>Frontend</h2>
 
-<p>
+        <p>
 
-HTML
+            HTML
 
-<br>
+            <br>
 
-CSS
+            CSS
 
-<br>
+            <br>
 
-Plotly
+            Plotly
 
-</p>
+        </p>
 
-</div>
+    </div>
 
 </section>
 
@@ -273,31 +266,31 @@ Plotly
 
 <section style="text-align:center;padding:50px;">
 
-<a href="/single-review">
+    <a href="{{ url_for('single_review') }}">
 
-<button class="primary-btn">
+        <button class="primary-btn">
 
-<i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
 
-Analyze Review
+            Analyze Review
 
-</button>
+        </button>
 
-</a>
+    </a>
 
-&nbsp;&nbsp;
+    &nbsp;&nbsp;
 
-<a href="/upload">
+    <a href="{{ url_for('upload') }}">
 
-<button class="secondary-btn">
+        <button class="secondary-btn">
 
-<i class="fa-solid fa-upload"></i>
+            <i class="fa-solid fa-upload"></i>
 
-Analyze CSV
+            Analyze CSV
 
-</button>
+        </button>
 
-</a>
+    </a>
 
 </section>
 
@@ -305,7 +298,7 @@ Analyze CSV
 
 <footer>
 
-Built with ❤️ using Flask • Machine Learning • NLP • TF-IDF • Linear SVM
+    Built with ❤️ using Flask • Machine Learning • NLP • TF-IDF • Linear SVM
 
 </footer>
 

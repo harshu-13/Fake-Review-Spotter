@@ -31,14 +31,15 @@
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
+
 <nav>
 
     <div class="logo">
 
-        <img
-            src="{{ url_for('static', filename='images/favicon.png') }}"
-            alt="Fake Review Spotter Logo"
-            class="logo-img">
+        <img src="{{ url_for('static', filename='images/favicon.png') }}"
+             alt="Fake Review Spotter Logo"
+             class="logo-img">
 
         <span>Fake Review Spotter</span>
 
@@ -46,103 +47,105 @@
 
     <div class="nav-links">
 
-        <a href="/">Home</a>
+        <a href="{{ url_for('home') }}">Home</a>
 
-        <a href="/single-review">Single Review</a>
+        <a href="{{ url_for('single_review') }}">Single Review</a>
 
-        <a href="/upload">Bulk Analysis</a>
+        <a href="{{ url_for('upload') }}">Bulk Analysis</a>
 
     </div>
 
 </nav>
 
+<!-- ================= RESULT ================= -->
+
 <section class="hero">
 
-<div class="feature-card"
-     style="max-width:850px;margin:auto;">
+    <div class="feature-card"
+         style="max-width:850px; margin:auto;">
 
-<h1>
+        <h1>
 
-<i class="fa-solid fa-robot"></i>
+            <i class="fa-solid fa-robot"></i>
 
-Prediction Complete
+            Prediction Complete
 
-</h1>
+        </h1>
 
-<br>
+        <br>
 
-<h2>
+        <h2>
 
-{% if "Fake" in prediction %}
+            {% if "Fake" in prediction %}
 
-<span style="color:#dc2626;font-size:40px;">
+            <span style="color:#dc2626;font-size:40px;">
 
-❌ Fake Review
+                ❌ Fake Review
 
-</span>
+            </span>
 
-{% else %}
+            {% else %}
 
-<span style="color:#16a34a;font-size:40px;">
+            <span style="color:#16a34a;font-size:40px;">
 
-✅ Genuine Review
+                ✅ Genuine Review
 
-</span>
+            </span>
 
-{% endif %}
+            {% endif %}
 
-</h2>
+        </h2>
 
-<br>
+        <br>
 
-<div
-style="
-background:#f8fafc;
-padding:25px;
-border-radius:15px;
-text-align:left;
-margin-top:30px;
-">
+        <div style="
+            background:#f8fafc;
+            padding:25px;
+            border-radius:15px;
+            text-align:left;
+            margin-top:30px;">
 
-<h3>
+            <h3>
 
-<i class="fa-solid fa-comment"></i>
+                <i class="fa-solid fa-comment"></i>
 
-Review
+                Review
 
-</h3>
+            </h3>
 
-<br>
+            <br>
 
-<p style="line-height:1.9;">
+            <p style="line-height:1.9;">
 
-{{ review }}
+                {{ review }}
 
-</p>
+            </p>
 
-</div>
+        </div>
 
-<br><br>
+        <br><br>
 
-<a href="/single-review">
+        <a href="{{ url_for('single_review') }}">
 
-<button class="primary-btn">
+            <button class="primary-btn">
 
-<i class="fa-solid fa-arrow-rotate-left"></i>
+                <i class="fa-solid fa-arrow-rotate-left"></i>
 
-Analyze Another Review
+                Analyze Another Review
 
-</button>
+            </button>
 
-</a>
+        </a>
 
-</div>
+    </div>
 
 </section>
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-Built with ❤️ using Flask • NLP • Linear SVM • Machine Learning
+    Built with ❤️ using Flask • NLP • TF-IDF • Linear SVM • Machine Learning
 
 </footer>
 

@@ -9,16 +9,21 @@
 
     <title>Fake Review Spotter AI</title>
 
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/png"
+          href="{{ url_for('static', filename='images/favicon.png') }}">
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet"
-        href="{{ url_for('static', filename='css/style.css') }}">
+          href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
 
@@ -29,8 +34,14 @@
     <nav>
 
         <div class="logo">
-            <i class="fa-solid fa-shield-halved"></i>
-            Fake Review Spotter
+
+            <img
+                src="{{ url_for('static', filename='images/favicon.png') }}"
+                alt="Fake Review Spotter Logo"
+                class="logo-img">
+
+            <span>Fake Review Spotter</span>
+
         </div>
 
         <div class="nav-links">
@@ -63,11 +74,9 @@
             </h1>
 
             <p>
-
                 Detect fake and genuine customer reviews using
                 Natural Language Processing, Machine Learning,
                 and Artificial Intelligence.
-
             </p>
 
             <div class="hero-buttons">
@@ -113,10 +122,8 @@
             <h2>Machine Learning</h2>
 
             <p>
-
                 Detect fake reviews using TF-IDF,
                 NLP and Linear SVM.
-
             </p>
 
         </div>
@@ -128,10 +135,8 @@
             <h2>Bulk Analysis</h2>
 
             <p>
-
                 Upload CSV files and analyze
                 thousands of reviews instantly.
-
             </p>
 
         </div>
@@ -143,10 +148,8 @@
             <h2>90% Accuracy</h2>
 
             <p>
-
                 Trained on multiple labelled
                 fake review datasets.
-
             </p>
 
         </div>
@@ -158,10 +161,8 @@
     <footer>
 
         <p>
-
             Built with ❤️ using Flask, NLP,
             TF-IDF and Machine Learning.
-
         </p>
 
     </footer>

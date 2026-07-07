@@ -35,14 +35,25 @@ nav{
 }
 
 .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
     font-size:28px;
     font-weight:700;
     color:#2563eb;
 }
 
-.logo i{
-    margin-right:8px;
+.logo span{
+    color:#2563eb;
 }
+
+.logo-img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+}
+
+/* Navigation Links */
 
 .nav-links{
     display:flex;
@@ -278,6 +289,10 @@ footer{
 
     .hero-buttons{
         flex-direction:column;
+    }
+
+    .logo{
+        justify-content:center;
     }
 
     button{

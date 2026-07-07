@@ -9,6 +9,11 @@
 
     <title>Analyze Review | Fake Review Spotter</title>
 
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/png"
+          href="{{ url_for('static', filename='images/favicon.png') }}">
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -29,8 +34,14 @@
 <nav>
 
     <div class="logo">
-        <i class="fa-solid fa-shield-halved"></i>
-        Fake Review Spotter
+
+        <img
+            src="{{ url_for('static', filename='images/favicon.png') }}"
+            alt="Fake Review Spotter Logo"
+            class="logo-img">
+
+        <span>Fake Review Spotter</span>
+
     </div>
 
     <div class="nav-links">
@@ -57,11 +68,9 @@
         </h1>
 
         <p>
-
             Paste a customer review below and let our
             Machine Learning model determine whether
             it is genuine or fake.
-
         </p>
 
         <!-- Error Message -->

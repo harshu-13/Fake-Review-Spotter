@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Bulk Review Analysis</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        Fake Review Spotter
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/single-review">Single Review</a>
+
+        <a href="/dashboard">Dashboard</a>
+
+    </div>
+
+</nav>
+
+<!-- ================= UPLOAD SECTION ================= -->
+
+<section class="hero">
+
+    <div class="feature-card"
+         style="max-width:750px;margin:auto;">
+
+        <i class="fa-solid fa-file-csv"
+           style="font-size:70px;color:#2563eb;"></i>
+
+        <br><br>
+
+        <h1>Bulk CSV Review Analysis</h1>
+
+        <br>
+
+        <p>
+
+            Upload a CSV file containing customer reviews.
+
+            Our AI model will analyze every review and identify
+
+            whether it is <strong>Fake</strong> or <strong>Genuine</strong>.
+
+        </p>
+
+        <br><br>
+
+        <form action="/upload_file"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <input
+                type="file"
+                name="review_file"
+                accept=".csv"
+                required>
+
+            <br><br>
+
+            <button class="primary-btn"
+                    type="submit">
+
+                <i class="fa-solid fa-upload"></i>
+
+                Analyze CSV
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    Built with ❤️ using Flask • NLP • Machine Learning
+
+</footer>
+
+</body>
+
+</html>

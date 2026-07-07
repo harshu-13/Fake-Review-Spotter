@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        Fake Review Spotter
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/single-review">Single Review</a>
+
+        <a href="/upload">Bulk Analysis</a>
+
+    </div>
+
+</nav>
+
+<section class="hero">
+
+<div class="feature-card"
+     style="max-width:850px;margin:auto;">
+
+<h1>
+
+<i class="fa-solid fa-robot"></i>
+
+Prediction Complete
+
+</h1>
+
+<br>
+
+<h2>
+
+{% if "Fake" in prediction %}
+
+<span style="color:#dc2626;font-size:40px;">
+
+❌ Fake Review
+
+</span>
+
+{% else %}
+
+<span style="color:#16a34a;font-size:40px;">
+
+✅ Genuine Review
+
+</span>
+
+{% endif %}
+
+</h2>
+
+<br>
+
+<div
+style="
+background:#f8fafc;
+padding:25px;
+border-radius:15px;
+text-align:left;
+margin-top:30px;
+">
+
+<h3>
+
+<i class="fa-solid fa-comment"></i>
+
+Review
+
+</h3>
+
+<br>
+
+<p style="line-height:1.9;">
+
+{{ review }}
+
+</p>
+
+</div>
+
+<br><br>
+
+<a href="/single-review">
+
+<button class="primary-btn">
+
+<i class="fa-solid fa-arrow-rotate-left"></i>
+
+Analyze Another Review
+
+</button>
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+Built with ❤️ using Flask • NLP • Linear SVM • Machine Learning
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fake Review Spotter AI</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- ================= Navbar ================= -->
+
+    <nav>
+
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i>
+            Fake Review Spotter
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/single-review">
+                Single Review
+            </a>
+
+            <a href="/upload">
+                Bulk Analysis
+            </a>
+
+            <a href="/dashboard">
+                Dashboard
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= Hero ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                AI Powered <br>
+                Fake Review Detection
+            </h1>
+
+            <p>
+
+                Detect fake and genuine customer reviews using
+                Natural Language Processing, Machine Learning,
+                and Artificial Intelligence.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/single-review">
+
+                    <button class="primary-btn">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        Analyze Review
+
+                    </button>
+
+                </a>
+
+                <a href="/upload">
+
+                    <button class="secondary-btn">
+
+                        <i class="fa-solid fa-file-arrow-up"></i>
+
+                        Analyze CSV
+
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= Features ================= -->
+
+    <section class="features">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h2>Machine Learning</h2>
+
+            <p>
+
+                Detect fake reviews using TF-IDF,
+                NLP and Linear SVM.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <h2>Bulk Analysis</h2>
+
+            <p>
+
+                Upload CSV files and analyze
+                thousands of reviews instantly.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-shield"></i>
+
+            <h2>90% Accuracy</h2>
+
+            <p>
+
+                Trained on multiple labelled
+                fake review datasets.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= Footer ================= -->
+
+    <footer>
+
+        <p>
+
+            Built with ❤️ using Flask, NLP,
+            TF-IDF and Machine Learning.
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Bulk Analysis Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        Fake Review Spotter
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/single-review">Single Review</a>
+
+        <a href="/upload">Bulk Analysis</a>
+
+    </div>
+
+</nav>
+
+<!-- ================= TITLE ================= -->
+
+<section style="padding:50px 8%;">
+
+<h1 style="text-align:center;
+margin-bottom:50px;
+font-size:45px;">
+
+<i class="fa-solid fa-chart-column"></i>
+
+Bulk Review Analysis Dashboard
+
+</h1>
+
+<!-- ================= STATS ================= -->
+
+<div class="features">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-file-lines"></i>
+
+<h2>Total Reviews</h2>
+
+<h1>{{ total_reviews }}</h1>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-circle-xmark"
+style="color:#dc2626;"></i>
+
+<h2>Fake Reviews</h2>
+
+<h1>{{ fake_reviews }}</h1>
+
+<p>{{ fake_percentage }}%</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-circle-check"
+style="color:#16a34a;"></i>
+
+<h2>Genuine Reviews</h2>
+
+<h1>{{ genuine_reviews }}</h1>
+
+<p>{{ genuine_percentage }}%</p>
+
+</div>
+
+</div>
+
+<!-- ================= PIE CHART ================= -->
+
+<div class="feature-card"
+style="margin-top:40px;">
+
+<h2>
+
+<i class="fa-solid fa-chart-pie"></i>
+
+Review Distribution
+
+</h2>
+
+<br>
+
+{{ chart|safe }}
+
+</div>
+
+<!-- ================= TABLE ================= -->
+
+<div class="feature-card"
+style="margin-top:40px;">
+
+<h2>
+
+<i class="fa-solid fa-table"></i>
+
+First 10 Reviews
+
+</h2>
+
+<br>
+
+<div style="overflow-x:auto;">
+
+{{ tables[0]|safe }}
+
+</div>
+
+</div>
+
+<!-- ================= DOWNLOAD ================= -->
+
+<div style="text-align:center;
+margin-top:40px;">
+
+<a href="/download_report">
+
+<button class="primary-btn">
+
+<i class="fa-solid fa-download"></i>
+
+Download Analysis Report
+
+</button>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+Built with ❤️ using Flask • NLP • Linear SVM • Machine Learning
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environment
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Flask
+instance/
+
+# Uploads
+uploads/*.csv
+reports/*.csv
+
+# VS Code
+.vscode/

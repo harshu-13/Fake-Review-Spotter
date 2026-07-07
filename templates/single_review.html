@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analyze Review | Fake Review Spotter</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        <i class="fa-solid fa-shield-halved"></i>
+        Fake Review Spotter
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/upload">Bulk Analysis</a>
+
+        <a href="/dashboard">Dashboard</a>
+
+    </div>
+
+</nav>
+
+<!-- ================= FORM ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Analyze a Review
+        </h1>
+
+        <p>
+
+            Paste a customer review below and let our
+            Machine Learning model determine whether
+            it is genuine or fake.
+
+        </p>
+
+        <!-- Error Message -->
+        {% if error %}
+        <div class="error-message">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <form action="/predict_review" method="POST">
+
+            <textarea
+                name="review"
+                rows="10"
+                placeholder="Paste your customer review here..."
+                required></textarea>
+
+            <br>
+
+            <button class="primary-btn" type="submit">
+
+                <i class="fa-solid fa-robot"></i>
+
+                Analyze Review
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    Built with ❤️ using Flask • NLP • Machine Learning
+
+</footer>
+
+</body>
+
+</html>

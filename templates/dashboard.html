@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Fake Review Spotter</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        Fake Review Spotter
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/single-review">Single Review</a>
+
+        <a href="/upload">Bulk Analysis</a>
+
+    </div>
+
+</nav>
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+
+<i class="fa-solid fa-chart-line"></i>
+
+Project Dashboard
+
+</h1>
+
+<p>
+
+An overview of the Fake Review Spotter project,
+its AI model, features, and performance.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= PROJECT INFO ================= -->
+
+<section class="features">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-brain"></i>
+
+<h2>Machine Learning</h2>
+
+<p>
+
+Linear Support Vector Machine (Linear SVM)
+
+trained using Natural Language Processing
+
+and TF-IDF Vectorization.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-database"></i>
+
+<h2>Datasets</h2>
+
+<p>
+
+Amazon Fake Reviews
+
+<br><br>
+
+Deceptive Opinion Spam (Hotel Reviews)
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-bullseye"></i>
+
+<h2>Model Accuracy</h2>
+
+<h1 style="color:#16a34a;">
+
+90%
+
+</h1>
+
+<p>
+
+Balanced Precision,
+
+Recall and F1-Score
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<h2>Single Review Analysis</h2>
+
+<p>
+
+Analyze one customer review instantly.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-file-csv"></i>
+
+<h2>Bulk CSV Analysis</h2>
+
+<p>
+
+Upload CSV files and analyze
+
+multiple reviews at once.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-chart-pie"></i>
+
+<h2>Analytics Dashboard</h2>
+
+<p>
+
+Interactive charts,
+
+summary statistics
+
+and downloadable reports.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= TECH STACK ================= -->
+
+<section class="features">
+
+<div class="feature-card">
+
+<i class="fa-brands fa-python"></i>
+
+<h2>Backend</h2>
+
+<p>
+
+Python
+
+<br>
+
+Flask
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-robot"></i>
+
+<h2>AI & NLP</h2>
+
+<p>
+
+NLTK
+
+<br>
+
+TF-IDF
+
+<br>
+
+Linear SVM
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-code"></i>
+
+<h2>Frontend</h2>
+
+<p>
+
+HTML
+
+<br>
+
+CSS
+
+<br>
+
+Plotly
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= ACTION BUTTONS ================= -->
+
+<section style="text-align:center;padding:50px;">
+
+<a href="/single-review">
+
+<button class="primary-btn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Analyze Review
+
+</button>
+
+</a>
+
+&nbsp;&nbsp;
+
+<a href="/upload">
+
+<button class="secondary-btn">
+
+<i class="fa-solid fa-upload"></i>
+
+Analyze CSV
+
+</button>
+
+</a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+Built with ❤️ using Flask • Machine Learning • NLP • TF-IDF • Linear SVM
+
+</footer>
+
+</body>
+
+</html>

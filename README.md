@@ -88,7 +88,7 @@ Both datasets were merged, cleaned, and preprocessed before training the model.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/fake-review-spotter.git
+git clone https://github.com/harshu-13/Fake-Review-Spotte
 ```
 
 ### 2. Navigate to the project
@@ -112,7 +112,7 @@ python app.py
 ### 5. Open your browser
 
 ```
-http://127.0.0.1:5000
+http://127.0.0.1:5001
 ```
 
 ## 🔮 Future Enhancements
@@ -131,4 +131,4 @@ http://127.0.0.1:5000
 
 Computer Science Engineering Student
 
-GitHub: *(Add your GitHub profile link after creating your repository.)*
+GitHub:https://github.com/harshu-13/Fake-Review-Spotter
